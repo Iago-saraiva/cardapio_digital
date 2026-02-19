@@ -576,7 +576,7 @@
             }
         }
 
-        // Checkout - Versão Corrigida para GitHub
+        // Checkout
         function checkout() {
             if (cart.length === 0) {
                 showToast('Adicione itens ao carrinho primeiro!');
@@ -588,10 +588,10 @@
             const adiantamento = subtotal * 0.3;
             const total = subtotal;
 
-            // Criar a mensagem de forma mais simples primeiro
+            // Creating message formated
             let message = "";
 
-            // Cabeçalho
+            // Header message
             message += "*NOVO PEDIDO - Salgadaria Araxá*\n\n";
             message += "*ITENS DO PEDIDO:*\n";
             message += "─────────────────────\n";
@@ -602,15 +602,15 @@
                 message += `• ${item.quantity}x ${item.name}\n`;
                 message += `  R$ ${item.price.toFixed(2)} un | Total: R$ ${itemTotal.toFixed(2)}\n`;
             });
-
-            // Resumo
+            
+            // conteudo
             message += "─────────────────────\n";
             message += "*RESUMO:*\n";
             message += `Subtotal: R$ ${subtotal.toFixed(2)}\n`;
-            message += `Adiantamento (30%): R$ ${adiantamento.toFixed(2)}\n`;
+            message += `Adiantamento caso sejá encomenda (30%): R$ ${adiantamento.toFixed(2)}\n`;
             message += `*Total: R$ ${total.toFixed(2)}*\n\n`;
 
-            // Informações de entrega
+            // Informations for delivery
             message += "*INFORMAÇÕES DE ENTREGA:*\n";
             message += "Nome: \n";
             message += "Endereço: \n";
@@ -618,16 +618,15 @@
             message += "Telefone: \n\n";
             message += "Aguardamos seu pedido! ✅";
 
-            // Codificar a mensagem para URL
             const messageEncoded = encodeURIComponent(message);
 
-            // Número do WhatsApp (seu número)
+            // Nunber for whatsapp
             const phoneNumber = "5534997150281";
 
-            // Criar URL do WhatsApp
+            // Create url for whatsapp
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${messageEncoded}`;
 
-            // Abrir WhatsApp
+            // Open whatsapp with message
             window.open(whatsappUrl, '_blank');
         }
 
