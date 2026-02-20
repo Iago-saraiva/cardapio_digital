@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabor & Arte - Cardápio Digital</title>
+    <title>Salgaderia Araxá - Cardápio Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link
@@ -208,7 +208,7 @@
                 description: "20 Unidades",
                 price: 22.00,
                 category: "fritos",
-                image: "https://static.photos/food/640x360/1",
+                image: "/images/coxinhas.jpg",
                 popular: true
             },
             {
@@ -341,7 +341,8 @@
                 description: "Sabores de recheio: Chocolate, Leite Ninho, Morango, Abacaxi, Beijinho",
                 price: 120.00,
                 category: "bolos",
-                image: "https://static.photos/food/640x360/14"
+                image: "https://static.photos/food/640x360/14",
+                popular: true
             },
             {
                 id: 18,
@@ -607,7 +608,7 @@
             message += "─────────────────────\n";
             message += "*RESUMO:*\n";
             message += `Subtotal: R$ ${subtotal.toFixed(2)}\n`;
-            message += `Adiantamento caso sejá encomenda (30%): R$ ${adiantamento.toFixed(2)}\n`;
+            message += `Adiantamento caso seja encomenda (30%): R$ ${adiantamento.toFixed(2)}\n`;
             message += `*Total: R$ ${total.toFixed(2)}*\n\n`;
 
             // Informations for delivery
